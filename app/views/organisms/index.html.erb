@@ -1,0 +1,26 @@
+<div class="jumbotron">
+	<h1 align="center">Lista de Organismos</h1>
+	
+	<table>
+		<tr>
+			<th>Id do Organismo</th>
+			<th>Taxa do Organismo</th>
+			<th>Nome do Organismo</th>
+			<th colspan="3"></th>
+		</tr>
+		
+		<% @organisms.each do |organism| %>
+			<tr>
+				<td><%= organism.id %></td>
+				<td><%= organism.tax_org %></td>
+				<td><%= organism.name %></td>
+				<td><%= link_to 'Mostrar', organism_path(organism) %></td>
+				<td><%= link_to 'Editar', edit_organism_path(organism) %></td>
+				<td><%= link_to 'Apagar', organism_path(organism), method: :delete, data: { confirm: 'Tem a certeza que quer apagar este Organismo?' } %></td>
+			</tr>
+		<% end %>
+	</table>
+	<br>
+	<%= link_to 'Novo Organismo', new_organism_path %>
+	
+</div>

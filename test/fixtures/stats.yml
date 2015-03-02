@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_gene: 1
+  id_mutation: 1
+  n_studies: 1
+  info: MyText
+
+two:
+  id_gene: 1
+  id_mutation: 1
+  n_studies: 1
+  info: MyText

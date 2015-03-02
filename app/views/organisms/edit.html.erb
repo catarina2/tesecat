@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<br>
+	<h1 align="center">Editar Organismo</h1>
+	
+	<%= form_for :organism, url: organism_path(@organism), method: :patch do |f| %>
+	<p>
+		<%= f.label :Id_Organismo %>
+		<%= f.text_field :id%>
+	</p>
+	<p>
+		<%= f.label :Taxa_do_Organismo%>
+		<%= f.text_field :tax_org%>
+	</p>
+	<p>
+		<%= f.label :Nome_do_Organismo%>
+		<%= f.text_field :name%>
+	</p>
+	<p>
+		<%= f.submit 'Editar Organismo'%>
+	</p>
+	<% end %>
+	<br>
+	<%= link_to 'Back', organisms_path %>
+</div>

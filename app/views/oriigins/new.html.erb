@@ -1,0 +1,18 @@
+<div class="jumbotron">
+	<h1 align="center">Nova Origem</h1>
+	
+	<%= form_for :oriigin, url: oriigins_path do |f| %>
+	
+	<p>
+		<%= f.label :Tipo%>
+		<%= f.select :orig_t, options_for_select([["In Vitro", "In Vitro"], ["sangue", "sangue"]]) %>
+	</p>
+	<p>
+		<%= f.label :Nome_do_Laboratorio%>
+		<%= f.text_field :lab_name%>
+	</p>
+	<p>
+		<%= f.submit 'Submeter Origem' %>
+	</p>
+	<% end %>
+</div>

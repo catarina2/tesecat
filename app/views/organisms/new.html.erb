@@ -1,0 +1,18 @@
+<div class="jumbotron">
+	<h1 align="center">Novo Organismo</h1>
+	
+	<%= form_for :organism, url: organisms_path do |f| %>
+	
+	<p>
+		<%= f.label :Taxa_do_Organismo%>
+		<%= f.text_field :tax_org%>
+	</p>
+	<p>
+		<%= f.label :Nome_do_Organismo%>
+		<%= f.text_field :name%>
+	</p>
+	<p>
+		<%= f.submit 'Submeter Organismo' %>
+	</p>
+	<% end %>
+</div>

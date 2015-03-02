@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_isolado: 1
+  nome: MyString
+  doenca: MyText
+  namostras: 1
+  tax_org: 1
+  id_origem: 1
+
+two:
+  id_isolado: 1
+  nome: MyString
+  doenca: MyText
+  namostras: 1
+  tax_org: 1
+  id_origem: 1

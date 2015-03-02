@@ -1,0 +1,26 @@
+<div class="jumbotron">
+	<h1 align="center">Lista de Origens</h1>
+	
+	<table>
+		<tr>
+			<th>Id da Origem</th>
+			<th>Tipo da Origem</th>
+			<th>Nome do Laboratório</th>
+			<th colspan="3"></th>
+		</tr>
+		
+		<% @oriigins.each do |oriigin| %>
+			<tr>
+				<td><%= oriigin.id %></td>
+				<td><%= oriigin.orig_t %></td>
+				<td><%= oriigin.lab_name %></td>
+				<td><%= link_to 'Mostrar', oriigin_path(oriigin) %></td>
+				<td><%= link_to 'Editar', edit_oriigin_path(oriigin) %></td>
+				<td><%= link_to 'Apagar', oriigin_path(oriigin), method: :delete, data: { confirm: 'Tem a certeza que quer apagar esta Origem?' } %></td>
+			</tr>
+		<% end %>
+	</table>
+	<br>
+	<%= link_to 'Nova Origem', new_oriigin_path %>
+	
+</div>

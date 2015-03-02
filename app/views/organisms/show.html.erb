@@ -1,0 +1,56 @@
+<div class="jumbotron">
+	<br>
+    <p>
+		<strong>Id do Organismo: </strong>
+		<%= @organism.id%>
+	</p>
+	<p>
+		<strong>Taxa do Organismo: </strong>
+		<%= @organism.tax_org%>
+	</p>
+	<p>
+		<strong>Nome do Organismo: </strong>
+		<%= @organism.name%>
+	</p>
+	<br>
+	<h2>Isolados deste Organismo</h2>
+	<table>
+		<tr>
+			<th>Id do Isolado</th>
+			<th>Nome do Isolado</th>
+			<th>Doença do Isolado</th>
+			<th>Número de amostras do Isoaldo</th>
+			<th colspan="3"></th>
+		</tr>
+		
+		<% @organism.isolateds.each do |isolated| %>
+			<tr>
+				<td><%= isolated.id %></td>
+				<td><%= isolated.name %></td>
+				<td><%= isolated.disease %></td>
+				<td><%= isolated.n_samples %></td>
+				</tr>
+		<% end %>
+	</table>
+	<br>
+	<h2>Adicionar um isolado a este Organismo</h2>
+	<%= form_for([@organism, @organism.isolateds.build]) do |f|%>
+		<p>
+			<%= f.label :Nome_do_Isolado%>
+			<%= f.text_field :name%>
+		</p>
+		<p>
+			<%= f.label :Doenca%>
+			<%= f.text_field :disease%>
+		</p>
+		<p>
+			<%= f.label :Numero_de_Amostras%>
+			<%= f.text_field :n_samples%>
+		</p>
+		<p>
+			<%= f.submit 'Submeter Isolados' %>
+		</p>
+	<% end %>
+	<br>
+	<%= link_to 'Back', organisms_path %>
+</div>

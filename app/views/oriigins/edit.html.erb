@@ -1,0 +1,24 @@
+<div class="jumbotron">
+	<br>
+	<h1 align="center">Editar Origem</h1>
+	
+	<%= form_for :oriigin, url: oriigin_path(@oriigin), method: :patch do |f| %>
+	<p>
+		<%= f.label :Id_Origem %>
+		<%= f.text_field :id%>
+	</p>
+	<p>
+		<%= f.label :Tipo%>
+		<%= f.select :orig_t, options_for_select([["In Vitro", "In Vitro"], ["sangue", "sangue"]]) %>
+	</p>
+	<p>
+		<%= f.label :Nome_do_Laboratorio%>
+		<%= f.text_field :lab_name%>
+	</p>
+	<p>
+		<%= f.submit 'Editar Origem'%>
+	</p>
+	<% end %>
+	<br>
+	<%= link_to 'Back', oriigins_path %>
+</div>
